@@ -5,6 +5,14 @@
 @endsection
 
 @section('content')
+<style>
+    body {
+        background-image: url('/logo-white.png');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+</style>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -35,7 +43,7 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
+
 										<th>Nombre</th>
 
                                         <th></th>
@@ -45,7 +53,7 @@
                                     @foreach ($formatos as $formato)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
+
 											<td>{{ $formato->nombre }}</td>
 
                                             <td>

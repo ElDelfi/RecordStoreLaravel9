@@ -5,6 +5,22 @@
 @endsection
 
 @section('content')
+    <style>
+        body {
+            background-image: url('/logo-white.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+    </style>
+    <style>
+        body {
+            background-image: url('/logo-white.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+    </style>
     <section class="content container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -16,7 +32,8 @@
                         <span class="card-title">{{ __('Create') }} Formato</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('formatos.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('formatos.store') }}" role="form"
+                            enctype="multipart/form-data">
                             @csrf
 
                             @include('formato.form')

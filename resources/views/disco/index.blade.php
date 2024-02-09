@@ -5,6 +5,14 @@
 @endsection
 
 @section('content')
+    <style>
+        body {
+            background-image: url('/prueba.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+    </style>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -16,11 +24,12 @@
                                 {{ __('Disco') }}
                             </span>
 
-                             <div class="float-right">
-                                <a href="{{ route('discos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                            <div class="float-right">
+                                <a href="{{ route('discos.create') }}" class="btn btn-primary btn-sm float-right"
+                                    data-placement="left">
+                                    {{ __('Create New') }}
                                 </a>
-                              </div>
+                            </div>
                         </div>
                     </div>
                     @if ($message = Session::get('success'))
@@ -36,12 +45,12 @@
                                     <tr>
                                         <th>No</th>
 
-										<th>Genero</th>
-										<th>Formato</th>
-										<th>Nombre</th>
-										<th>Artista</th>
-										<th>Estado</th>
-										<th>Year</th>
+                                        <th>Genero</th>
+                                        <th>Formato</th>
+                                        <th>Nombre</th>
+                                        <th>Artista</th>
+                                        <th>Estado</th>
+                                        <th>Year</th>
 
                                         <th></th>
                                     </tr>
@@ -51,20 +60,25 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
 
-											<td>{{ $disco->genero->nombre}}</td>
-											<td>{{ $disco->formato->nombre}}</td>
-											<td>{{ $disco->nombre }}</td>
-											<td>{{ $disco->artista }}</td>
-											<td>{{ $disco->album }}</td>
-											<td>{{ $disco->year }}</td>
+                                            <td>{{ $disco->genero->nombre }}</td>
+                                            <td>{{ $disco->formato->nombre }}</td>
+                                            <td>{{ $disco->nombre }}</td>
+                                            <td>{{ $disco->artista }}</td>
+                                            <td>{{ $disco->album }}</td>
+                                            <td>{{ $disco->year }}</td>
 
                                             <td>
-                                                <form action="{{ route('discos.destroy',$disco->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('discos.show',$disco->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('discos.edit',$disco->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
+                                                <form action="{{ route('discos.destroy', $disco->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary "
+                                                        href="{{ route('discos.show', $disco->id) }}"><i
+                                                            class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
+                                                    <a class="btn btn-sm btn-success"
+                                                        href="{{ route('discos.edit', $disco->id) }}"><i
+                                                            class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i
+                                                            class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
                                                 </form>
                                             </td>
                                         </tr>

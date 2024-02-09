@@ -5,6 +5,14 @@
 @endsection
 
 @section('content')
+    <style>
+        body {
+            background-image: url('/logo-white.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+    </style>
     <section class="content container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -19,7 +27,7 @@
                     </div>
 
                     <div class="card-body">
-                        
+
                         <div class="form-group">
                             <strong>Nombre:</strong>
                             {{ $genero->nombre }}

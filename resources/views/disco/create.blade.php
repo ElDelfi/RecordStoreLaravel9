@@ -5,6 +5,14 @@
 @endsection
 
 @section('content')
+<style>
+    body {
+        background-image: url('/prueba.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+</style>
     <section class="content container-fluid">
         <div class="row">
             <div class="col-md-12">

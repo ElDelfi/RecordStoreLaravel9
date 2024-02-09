@@ -22,9 +22,10 @@
             {!! $errors->first('artista', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('album') }}
-            {{ Form::text('album', $disco->album, ['class' => 'form-control' . ($errors->has('album') ? ' is-invalid' : ''), 'placeholder' => 'Album']) }}
+            {{ Form::label('Estado') }}
+            {{ Form::text('album', $disco->album, ['class' => 'form-control' . ($errors->has('album') ? ' is-invalid' : ''), 'placeholder' => 'Estado']) }}
             {!! $errors->first('album', '<div class="invalid-feedback">:message</div>') !!}
+            {{-- si da error cambiar donde pone estado por album otra vez --}}
         </div>
         <div class="form-group">
             {{ Form::label('year') }}

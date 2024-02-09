@@ -1,6 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+<style>
+    body {
+        background-image: url('/logo-white.png');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+</style>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
